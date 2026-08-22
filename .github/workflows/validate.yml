@@ -1,32 +1,50 @@
-name: Build and validate skill
+name: Validate skill
 
 on:
   push:
   pull_request:
 
 permissions:
-  contents: write
+  contents: read
+
+concurrency:
+  group: validate-${{ github.workflow }}-${{ github.ref }}
+  cancel-in-progress: true
 
 jobs:
-  build-and-validate:
+  validate:
     runs-on: ubuntu-latest
     steps:
       - uses: actions/checkout@v4
         with:
           fetch-depth: 0
+
       - uses: actions/setup-python@v5
         with:
           python-version: "3.12"
-      - run: python scripts/build_skill.py
-      - run: python scripts/validate.py
-      - name: Commit generated skill
-        if: github.event_name == 'push'
-        run: |
-          if git diff --quiet -- skills/ultra-web-design/SKILL.md; then
-            exit 0
-          fi
-          git config user.name "github-actions[bot]"
-          git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
-          git add skills/ultra-web-design/SKILL.md
-          git commit -m "Build canonical skill [skip ci]"
-          git push
+
+      - name: Compile repository scripts
+        run: python -m compileall -q scripts
+
+      - name: Build complete reference manifest
+        run: python scripts/build_manifest.py
+
+      - name: Verify generated templates
+        run: python scripts/sync_templates.py --check
+
+      - name: Run repository validator
+        run: python scripts/validate.py
+
+      - name: Install pinned Agent Skills reference validator
+        run: >-
+          python -m pip install --disable-pip-version-check
+          "git+https://github.com/agentskills/agentskills.git@69ef37e9424c0a7ea9dd2293b559e43ec8176379#subdirectory=skills-ref"
+
+      - name: Validate official Agent Skills format
+        run: skills-ref validate skills/ultra-web-design
+
+      - name: Reject generated drift
+        run: >-
+          git diff --exit-code --
+          skills/ultra-web-design/MANIFEST.md
+          skills/ultra-web-design/templates/
