@@ -1,0 +1,58 @@
+:root {
+  color-scheme: light;
+
+  --canvas: #fff;
+  --surface: #fff;
+  --surface-raised: #fff;
+  --text: #111;
+  --text-muted: #555;
+  --border: #ddd;
+  --accent: #000;
+  --accent-contrast: #fff;
+  --positive: #087a46;
+  --warning: #8a5a00;
+  --danger: #b42318;
+  --focus: #005fcc;
+
+  --font-display: "Approved Display", sans-serif;
+  --font-body: "Approved Body", sans-serif;
+  --font-utility: var(--font-body);
+  --font-data: ui-monospace, monospace;
+
+  --step--1: clamp(.78rem, .75rem + .12vw, .86rem);
+  --step-0: clamp(1rem, .96rem + .18vw, 1.125rem);
+  --step-1: clamp(1.25rem, 1.13rem + .55vw, 1.6rem);
+  --step-2: clamp(1.6rem, 1.35rem + 1.1vw, 2.3rem);
+  --step-3: clamp(2.1rem, 1.65rem + 2vw, 3.4rem);
+  --step-4: clamp(2.8rem, 1.95rem + 3.7vw, 5.5rem);
+
+  --space-1: .25rem;
+  --space-2: .5rem;
+  --space-3: .75rem;
+  --space-4: 1rem;
+  --space-5: 1.5rem;
+  --space-6: 2.25rem;
+  --space-7: 3.5rem;
+  --space-8: 5.5rem;
+
+  --radius-control: .5rem;
+  --radius-surface: .875rem;
+  --border-width: 1px;
+  --shadow-low: 0 .25rem 1rem rgb(0 0 0 / .08);
+  --shadow-high: 0 1rem 3rem rgb(0 0 0 / .14);
+
+  --duration-fast: 120ms;
+  --duration-default: 180ms;
+  --duration-slow: 360ms;
+  --ease-enter: cubic-bezier(.23, 1, .32, 1);
+  --ease-move: cubic-bezier(.77, 0, .175, 1);
+  --ease-exit: cubic-bezier(.4, 0, 1, 1);
+}
+
+@media (prefers-reduced-motion: reduce) {
+  :root {
+    --duration-fast: 0ms;
+    --duration-default: 80ms;
+    --duration-slow: 120ms;
+  }
+}

@@ -1,0 +1,18 @@
+{
+  "schemaVersion": "ultra-web-design-system/v1",
+  "id": "project-slug",
+  "name": "Project Name",
+  "category": "Business category",
+  "description": "One-sentence catalog description.",
+  "source": {
+    "type": "project",
+    "origin": "Owner-approved design synthesis",
+    "verifiedAt": "YYYY-MM-DD"
+  },
+  "files": {
+    "product": "PRODUCT.md",
+    "design": "DESIGN.md",
+    "tokens": "tokens.css",
+    "usage": "USAGE.md"
+  }
+}

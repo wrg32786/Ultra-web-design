@@ -80,6 +80,10 @@ the result against the definition of done before shipping.
 │   ├── llms.txt
 │   └── ultra-web-design/
 │       ├── SKILL.md
+│       ├── SKILL.header.md
+│       ├── modules/
+│       │   ├── 00-core.md
+│       │   └── 01…09 ordered modules
 │       └── templates/
 │           ├── PRODUCT.md
 │           ├── DIRECTION-CARD.md
@@ -94,10 +98,11 @@ the result against the definition of done before shipping.
 │           ├── manifest.json
 │           └── tokens.css
 └── scripts/
+    ├── build_skill.py
     └── validate.py
 ```
 
-`SKILL.md` is the single source of truth. The files in `templates/` are extracted working copies of Section 38, included so a project can start without manually copying fenced examples.
+`modules/` is the editable source of truth. `SKILL.md` is the generated, installable single-file build. The files in `templates/` are extracted working copies of Section 38, included so a project can start without manually copying fenced examples.
 
 ## Source synthesis
 
@@ -145,13 +150,14 @@ Delete unused fields rather than preserving empty process theater.
 
 ## Validation
 
-Run the stdlib-only validator:
+Build the single-file skill and run the stdlib-only validator:
 
 ```bash
+python scripts/build_skill.py
 python scripts/validate.py
 ```
 
-It verifies the canonical file, frontmatter, version, complete numbered sections, source snapshots, template inventory, and minimum size needed to catch accidental truncation.
+It verifies that the generated skill matches the ordered modules, then checks frontmatter, version, complete numbered sections, source snapshots, template inventory, and minimum size needed to catch accidental truncation.
 
 GitHub Actions runs the same check on pushes and pull requests.
 
@@ -166,7 +172,7 @@ A source update is accepted only when it changes a website-design decision. Reco
 5. What was integrated, reconciled, or rejected
 6. The updated version and changelog entry
 
-Do not paste an upstream skill wholesale. Preserve the authority hierarchy and resolve contradictions in one place.
+Run `python scripts/build_skill.py` after module changes. Do not paste an upstream skill wholesale. Preserve the authority hierarchy and resolve contradictions in one place.
 
 ## License
 
