@@ -1,0 +1,30 @@
+cff-version: 1.2.0
+message: >-
+  If Ultra Web Design informs your project, article, benchmark, or research,
+  cite this repository and the exact version or commit used.
+title: Ultra Web Design
+type: software
+authors:
+  - family-names: Gwyn
+    given-names: William
+    alias: wrg32786
+version: 2.0.0
+date-released: 2026-08-22
+repository-code: https://github.com/wrg32786/Ultra-web-design
+url: https://wrg32786.github.io/Ultra-web-design/
+license: Apache-2.0
+abstract: >-
+  An open-source Agent Skill for researching, positioning, designing, building,
+  auditing, and shipping distinctive business websites. It combines product truth,
+  content architecture, visual direction, responsive implementation, accessibility,
+  performance, motion, SEO, operational QA, and source provenance.
+keywords:
+  - web design
+  - website design
+  - AI agent
+  - Agent Skills
+  - frontend design
+  - design system
+  - accessibility
+  - responsive design
+  - web performance
