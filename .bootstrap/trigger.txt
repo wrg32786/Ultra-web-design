@@ -1,1 +1,1 @@
-Trigger the verified one-time repository bootstrap after payload repair.
+Trigger the verified one-time repository bootstrap after CI permission repair.
