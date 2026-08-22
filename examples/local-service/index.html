@@ -1,0 +1,283 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="description" content="Illustrative concept for High Desert Tree Co., a local arborist service.">
+  <title>High Desert Tree Co. — Practical tree care for Central Oregon</title>
+  <style>
+    :root {
+      --forest: #173c32;
+      --forest-2: #245947;
+      --moss: #7a8f57;
+      --sun: #f3b63f;
+      --sand: #efe4cb;
+      --paper: #fffaf0;
+      --ink: #17312a;
+      --line: #87937d;
+      --red: #a5452b;
+      --max: 1160px;
+    }
+    * { box-sizing: border-box; }
+    html { scroll-behavior: smooth; }
+    body {
+      margin: 0;
+      color: var(--ink);
+      background: var(--sand);
+      font-family: Georgia, "Times New Roman", serif;
+      line-height: 1.58;
+    }
+    a { color: inherit; text-underline-offset: 0.2em; }
+    a:focus-visible { outline: 3px solid var(--sun); outline-offset: 4px; }
+    .skip { position: absolute; top: -5rem; left: 1rem; z-index: 20; background: var(--paper); padding: 0.7rem 1rem; }
+    .skip:focus { top: 1rem; }
+    .shell { width: min(calc(100% - 2rem), var(--max)); margin-inline: auto; }
+    .label {
+      font-family: Arial, Helvetica, sans-serif;
+      font-size: 0.72rem;
+      font-weight: 800;
+      letter-spacing: 0.13em;
+      text-transform: uppercase;
+    }
+
+    header { background: var(--forest); color: var(--paper); border-bottom: 1px solid rgb(255 255 255 / 0.24); }
+    nav { min-height: 76px; display: flex; align-items: center; justify-content: space-between; gap: 1rem; }
+    .brand { display: flex; align-items: center; gap: 0.75rem; font-family: Arial, Helvetica, sans-serif; font-weight: 900; text-decoration: none; letter-spacing: -0.02em; }
+    .tree-mark { width: 2rem; height: 2rem; border: 2px solid var(--sun); border-radius: 50%; position: relative; }
+    .tree-mark::before, .tree-mark::after { content: ""; position: absolute; border: 1px solid var(--sun); border-radius: 50%; inset: 0.28rem; }
+    .tree-mark::after { inset: 0.68rem; background: var(--sun); }
+    .nav-links { display: flex; gap: 1.35rem; align-items: center; font-family: Arial, Helvetica, sans-serif; font-size: 0.9rem; }
+    .nav-links a { text-decoration: none; }
+    .nav-links a:hover { text-decoration: underline; }
+    .nav-cta { padding: 0.62rem 0.85rem; background: var(--sun); color: #282009; font-weight: 800; }
+
+    .hero { background: var(--forest); color: var(--paper); overflow: hidden; }
+    .hero-grid { min-height: 660px; display: grid; grid-template-columns: 1.05fr 0.95fr; align-items: stretch; }
+    .hero-copy { padding: clamp(4rem, 9vw, 8rem) 4rem 4rem 0; display: flex; flex-direction: column; justify-content: space-between; gap: 4rem; }
+    h1 { margin: 0.9rem 0 1.5rem; max-width: 11ch; font-size: clamp(3.6rem, 7.5vw, 7.5rem); line-height: 0.86; letter-spacing: -0.06em; font-weight: 500; }
+    .hero-intro { max-width: 38rem; font-size: 1.18rem; color: #d9e2d8; }
+    .hero-actions { display: flex; flex-wrap: wrap; gap: 0.8rem; margin-top: 2rem; font-family: Arial, Helvetica, sans-serif; }
+    .button { display: inline-flex; align-items: center; justify-content: center; min-height: 48px; padding: 0.72rem 1rem; border: 1px solid var(--paper); text-decoration: none; font-weight: 800; }
+    .button.primary { background: var(--sun); border-color: var(--sun); color: #282009; }
+    .service-strip { display: flex; flex-wrap: wrap; gap: 0.55rem 1.1rem; padding-top: 1.2rem; border-top: 1px solid rgb(255 255 255 / 0.28); font-family: Arial, Helvetica, sans-serif; font-size: 0.83rem; color: #d9e2d8; }
+
+    .terrain { position: relative; background: var(--moss); min-height: 100%; display: grid; place-items: center; border-left: 1px solid rgb(255 255 255 / 0.2); }
+    .terrain::before {
+      content: "";
+      position: absolute;
+      inset: 0;
+      opacity: 0.5;
+      background:
+        repeating-radial-gradient(ellipse at 68% 44%, transparent 0 34px, rgb(23 60 50 / 0.55) 35px 37px, transparent 38px 63px),
+        linear-gradient(142deg, transparent 52%, rgb(255 255 255 / 0.1) 52% 53%, transparent 53%);
+    }
+    .trunk {
+      position: relative;
+      width: min(78%, 430px);
+      aspect-ratio: 0.72;
+      background: #d8c49c;
+      border: 2px solid var(--forest);
+      border-radius: 48% 52% 45% 55% / 42% 45% 55% 58%;
+      box-shadow: 18px 20px 0 rgb(23 60 50 / 0.28);
+      transform: rotate(3deg);
+      display: grid;
+      place-items: center;
+    }
+    .ring { position: absolute; border: 2px solid var(--forest-2); border-radius: 50%; opacity: 0.75; }
+    .ring.one { inset: 9%; }
+    .ring.two { inset: 19%; transform: rotate(-7deg); }
+    .ring.three { inset: 31%; transform: rotate(12deg); }
+    .ring.four { inset: 43%; }
+    .cut-note { position: absolute; left: -1.2rem; bottom: 10%; width: 13rem; padding: 0.8rem; background: var(--paper); color: var(--ink); border: 1px solid var(--forest); box-shadow: 7px 7px 0 var(--forest); font-family: Arial, Helvetica, sans-serif; font-size: 0.78rem; transform: rotate(-3deg); }
+
+    .quick-facts { background: var(--sun); border-bottom: 1px solid var(--ink); }
+    .facts { display: grid; grid-template-columns: repeat(4, 1fr); }
+    .fact { padding: 1.35rem 1.2rem; border-right: 1px solid rgb(23 49 42 / 0.4); }
+    .fact:last-child { border-right: 0; }
+    .fact b { display: block; font-family: Arial, Helvetica, sans-serif; margin-bottom: 0.15rem; }
+    .fact span { font-size: 0.9rem; }
+
+    .section { padding: clamp(4.5rem, 9vw, 8rem) 0; border-bottom: 1px solid var(--line); }
+    .section-intro { display: grid; grid-template-columns: 0.55fr 1.45fr; gap: 2rem; margin-bottom: 4rem; }
+    h2 { margin: 0; max-width: 14ch; font-size: clamp(2.7rem, 5.5vw, 5.7rem); line-height: 0.93; letter-spacing: -0.05em; font-weight: 500; }
+    .lead { margin: 0; max-width: 44rem; font-size: 1.08rem; }
+
+    .service-list { border-top: 2px solid var(--ink); }
+    .service {
+      display: grid;
+      grid-template-columns: 4.5rem 0.8fr 1.2fr auto;
+      gap: 1.2rem;
+      align-items: baseline;
+      padding: 1.55rem 0;
+      border-bottom: 1px solid var(--line);
+    }
+    .service .number { font-family: Arial, Helvetica, sans-serif; font-weight: 900; color: var(--red); }
+    .service h3 { margin: 0; font-size: 1.35rem; }
+    .service p { margin: 0; color: #52655d; }
+    .service .when { font-family: Arial, Helvetica, sans-serif; font-size: 0.72rem; font-weight: 800; text-transform: uppercase; letter-spacing: 0.08em; white-space: nowrap; }
+
+    .diagnosis { background: var(--paper); }
+    .diagnosis-grid { display: grid; grid-template-columns: 0.9fr 1.1fr; gap: 1px; background: var(--line); border: 1px solid var(--line); }
+    .map { min-height: 480px; background: var(--forest-2); color: var(--paper); padding: clamp(2rem, 5vw, 4rem); position: relative; overflow: hidden; }
+    .map::before { content: ""; position: absolute; inset: -25%; background: repeating-radial-gradient(ellipse at 52% 52%, transparent 0 44px, rgb(255 255 255 / 0.18) 45px 47px, transparent 48px 76px); transform: rotate(13deg); }
+    .map-content { position: relative; max-width: 25rem; }
+    .map h3 { margin: 1rem 0; font-size: 2.5rem; line-height: 1; font-weight: 500; }
+    .place-list { display: flex; flex-wrap: wrap; gap: 0.5rem; margin-top: 2rem; font-family: Arial, Helvetica, sans-serif; }
+    .place-list span { border: 1px solid rgb(255 255 255 / 0.55); padding: 0.45rem 0.55rem; }
+    .assessment { background: var(--paper); padding: clamp(2rem, 5vw, 4rem); }
+    .assessment h3 { font-size: 2rem; margin: 0 0 1.4rem; }
+    .assessment ol { margin: 0; padding: 0; list-style: none; counter-reset: check; }
+    .assessment li { counter-increment: check; display: grid; grid-template-columns: 2.4rem 1fr; gap: 0.8rem; padding: 1rem 0; border-top: 1px solid var(--line); }
+    .assessment li::before { content: counter(check); display: grid; place-items: center; width: 1.8rem; height: 1.8rem; background: var(--sun); font-family: Arial, Helvetica, sans-serif; font-weight: 900; }
+
+    .contact { background: var(--red); color: var(--paper); }
+    .contact-grid { display: grid; grid-template-columns: 1.25fr 0.75fr; gap: 3rem; align-items: end; }
+    .contact h2 { color: var(--paper); }
+    .contact .button { background: var(--paper); color: var(--red); border-color: var(--paper); }
+    .contact-note { max-width: 35rem; }
+
+    footer { background: var(--forest); color: #d9e2d8; padding: 2rem 0; }
+    .footer-row { display: flex; justify-content: space-between; gap: 2rem; align-items: center; font-family: Arial, Helvetica, sans-serif; font-size: 0.85rem; }
+
+    @media (max-width: 900px) {
+      .nav-links a:not(.nav-cta) { display: none; }
+      .hero-grid, .section-intro, .diagnosis-grid, .contact-grid { grid-template-columns: 1fr; }
+      .hero-copy { padding-right: 0; min-height: 600px; }
+      .terrain { min-height: 540px; border-left: 0; border-top: 1px solid rgb(255 255 255 / 0.2); }
+      .facts { grid-template-columns: 1fr 1fr; }
+      .fact:nth-child(2) { border-right: 0; }
+      .fact:nth-child(-n+2) { border-bottom: 1px solid rgb(23 49 42 / 0.4); }
+      .service { grid-template-columns: 3rem 1fr; }
+      .service p, .service .when { grid-column: 2; }
+    }
+    @media (max-width: 560px) {
+      .hero-copy { padding-top: 4rem; min-height: auto; gap: 3rem; }
+      h1 { font-size: clamp(3.4rem, 17vw, 5rem); }
+      .terrain { min-height: 430px; }
+      .trunk { width: 72%; }
+      .cut-note { left: 0.3rem; width: 12rem; }
+      .facts { grid-template-columns: 1fr; }
+      .fact { border-right: 0; border-bottom: 1px solid rgb(23 49 42 / 0.4); }
+      .fact:last-child { border-bottom: 0; }
+      .section { padding-block: 4rem; }
+      .section-intro { margin-bottom: 2.5rem; }
+      .service { grid-template-columns: 2.2rem 1fr; gap: 0.75rem; }
+      .footer-row { flex-direction: column; align-items: flex-start; }
+    }
+    @media (prefers-reduced-motion: reduce) { html { scroll-behavior: auto; } }
+  </style>
+</head>
+<body>
+  <a class="skip" href="#main">Skip to content</a>
+  <header>
+    <nav class="shell" aria-label="Primary navigation">
+      <a class="brand" href="#top"><span class="tree-mark" aria-hidden="true"></span> High Desert Tree Co.</a>
+      <div class="nav-links">
+        <a href="#services">Services</a>
+        <a href="#assessment">Assessment</a>
+        <a class="nav-cta" href="#contact">Plan a site visit</a>
+      </div>
+    </nav>
+  </header>
+
+  <main id="main">
+    <section class="hero" id="top">
+      <div class="shell hero-grid">
+        <div class="hero-copy">
+          <div>
+            <p class="label">Illustrative concept · Central Oregon tree care</p>
+            <h1>Tree work that starts with the site, not the saw.</h1>
+            <p class="hero-intro">Pruning, risk assessment, defensible-space work, and removals planned around species, structures, access, weather, and what you want the property to become.</p>
+            <div class="hero-actions">
+              <a class="button primary" href="#assessment">See the assessment</a>
+              <a class="button" href="#services">Compare services</a>
+            </div>
+          </div>
+          <div class="service-strip" aria-label="Service context">
+            <span>Bend</span><span>Redmond</span><span>Sisters</span><span>Sunriver</span><span>Residential and small commercial</span>
+          </div>
+        </div>
+        <div class="terrain" aria-label="Abstract tree-ring field illustration">
+          <div class="trunk">
+            <span class="ring one"></span><span class="ring two"></span><span class="ring three"></span><span class="ring four"></span>
+            <div class="cut-note"><b>Second read:</b> tree rings become the site's planning map—age, stress, history, and next intervention.</div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section class="quick-facts" aria-label="Important service facts">
+      <div class="shell facts">
+        <div class="fact"><b>Start with</b><span>A site walk and written scope</span></div>
+        <div class="fact"><b>Pricing</b><span>Based on access, risk, and disposal</span></div>
+        <div class="fact"><b>Scheduling</b><span>Weather and nesting constraints apply</span></div>
+        <div class="fact"><b>Emergencies</b><span>Hazards are triaged, not promised blindly</span></div>
+      </div>
+    </section>
+
+    <section class="section" id="services">
+      <div class="shell">
+        <div class="section-intro">
+          <p class="label">Service decisions</p>
+          <div>
+            <h2>Choose the intervention the tree and site actually need.</h2>
+            <p class="lead">The page avoids vague “full-service” claims. Each service explains the condition it answers, the decision involved, and when another option may be safer.</p>
+          </div>
+        </div>
+        <div class="service-list">
+          <article class="service"><span class="number">01</span><h3>Structural pruning</h3><p>Reduce failure risk, improve clearance, or guide young growth without stripping the canopy.</p><span class="when">When structure can be improved</span></article>
+          <article class="service"><span class="number">02</span><h3>Risk assessment</h3><p>Document visible defects, targets, access constraints, and the urgency of the next action.</p><span class="when">Before deciding to remove</span></article>
+          <article class="service"><span class="number">03</span><h3>Defensible-space work</h3><p>Manage ladder fuels and clearance while preserving shade, soil protection, and valued trees.</p><span class="when">For property-scale planning</span></article>
+          <article class="service"><span class="number">04</span><h3>Removal and cleanup</h3><p>Plan rigging, drop zones, protection, hauling, and stump options when retention is no longer reasonable.</p><span class="when">When risk or use wins</span></article>
+        </div>
+      </div>
+    </section>
+
+    <section class="section diagnosis" id="assessment">
+      <div class="shell">
+        <div class="section-intro">
+          <p class="label">The site walk</p>
+          <div><h2>A useful estimate explains what changes the estimate.</h2></div>
+        </div>
+        <div class="diagnosis-grid">
+          <article class="map">
+            <div class="map-content">
+              <p class="label">Service area context</p>
+              <h3>High desert conditions change the plan.</h3>
+              <p>Wind exposure, compacted soils, irrigation patterns, snow load, wildfire priorities, neighboring structures, and equipment access all affect the safest scope.</p>
+              <div class="place-list"><span>Bend</span><span>Redmond</span><span>Sisters</span><span>Sunriver</span></div>
+            </div>
+          </article>
+          <article class="assessment">
+            <p class="label">What gets recorded</p>
+            <h3>The assessment sheet</h3>
+            <ol>
+              <li><span>Tree species, condition, visible defects, and current use.</span></li>
+              <li><span>Buildings, roads, utilities, fences, gardens, and people within the target area.</span></li>
+              <li><span>Equipment access, rigging constraints, debris handling, and stump expectations.</span></li>
+              <li><span>Recommended action, alternatives, urgency, exclusions, and what requires specialist review.</span></li>
+            </ol>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <section class="section contact" id="contact">
+      <div class="shell contact-grid">
+        <div>
+          <p class="label">A concrete next step</p>
+          <h2>Walk the site before pricing the story.</h2>
+        </div>
+        <div class="contact-note">
+          <p>This fixture intentionally stops before inventing a phone number, license, insurance claim, or availability promise. Production content would insert verified business details here.</p>
+          <a class="button" href="#top">Review the concept again</a>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <footer>
+    <div class="shell footer-row"><span><b>High Desert Tree Co.</b> · Illustrative concept only</span><a href="#top">Back to top</a></div>
+  </footer>
+</body>
+</html>
