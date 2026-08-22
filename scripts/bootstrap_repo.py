@@ -51,7 +51,6 @@ def main() -> None:
 
     shutil.rmtree(BOOTSTRAP)
     Path(__file__).unlink()
-    (ROOT / ".github" / "workflows" / "bootstrap.yml").unlink(missing_ok=True)
 
     print("Bootstrapped Ultra Web Design repository")
 
