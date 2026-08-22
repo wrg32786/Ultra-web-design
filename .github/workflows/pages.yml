@@ -1,0 +1,56 @@
+name: Deploy discovery site
+
+on:
+  push:
+    branches: [main]
+    paths:
+      - "site/**"
+      - "examples/**"
+      - "llms.txt"
+      - "CITATION.cff"
+      - "codemeta.json"
+      - "scripts/build_site.py"
+      - "scripts/build_social_preview.py"
+      - ".github/workflows/pages.yml"
+  workflow_dispatch:
+
+permissions:
+  contents: read
+  pages: write
+  id-token: write
+
+concurrency:
+  group: pages
+  cancel-in-progress: true
+
+jobs:
+  build:
+    if: github.event.repository.private == false
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-python@v5
+        with:
+          python-version: "3.12"
+      - uses: actions/configure-pages@v5
+      - name: Build static discovery site
+        env:
+          CONFIGURED_SITE_URL: ${{ vars.SITE_URL }}
+        run: |
+          SITE_URL="${CONFIGURED_SITE_URL:-https://wrg32786.github.io/Ultra-web-design}"
+          python scripts/build_site.py --output _site --site-url "$SITE_URL"
+      - uses: actions/upload-pages-artifact@v3
+        with:
+          path: _site
+
+  deploy:
+    if: github.event.repository.private == false
+    environment:
+      name: github-pages
+      url: ${{ steps.deployment.outputs.page_url }}
+    runs-on: ubuntu-latest
+    needs: build
+    steps:
+      - name: Deploy GitHub Pages
+        id: deployment
+        uses: actions/deploy-pages@v4
