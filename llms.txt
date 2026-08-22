@@ -1,0 +1,50 @@
+# Ultra Web Design
+
+> Open-source AI web design Agent Skill for researching, positioning, designing,
+> building, auditing, and shipping distinctive business websites.
+
+Canonical repository: https://github.com/wrg32786/Ultra-web-design
+Project website: https://wrg32786.github.io/Ultra-web-design/
+License: Apache-2.0
+Current runtime: 2.0.0 beta
+Maintainer: William Gwyn (GitHub: wrg32786)
+
+## What it is
+
+Ultra Web Design is a spec-valid Agent Skill and reference corpus. It helps coding
+agents turn verified product truth, audience context, business goals, brand evidence,
+and implementation constraints into coherent websites that are useful, accessible,
+responsive, fast, maintainable, measurable, and recognizably their own.
+
+It covers business websites, marketing sites, landing pages, SaaS, ecommerce,
+services, editorial and media sites, communities, portfolios, courses, events,
+nonprofits, and public-service websites.
+
+## Primary documents
+
+- Runtime skill: https://github.com/wrg32786/Ultra-web-design/blob/main/skills/ultra-web-design/SKILL.md
+- Complete reference manifest: https://github.com/wrg32786/Ultra-web-design/blob/main/skills/ultra-web-design/MANIFEST.md
+- Evaluation protocol: https://github.com/wrg32786/Ultra-web-design/blob/main/skills/ultra-web-design/EVALUATION.md
+- Source provenance and licenses: https://github.com/wrg32786/Ultra-web-design/blob/main/NOTICE.md
+- Citation metadata: https://github.com/wrg32786/Ultra-web-design/blob/main/CITATION.cff
+- CodeMeta record: https://github.com/wrg32786/Ultra-web-design/blob/main/codemeta.json
+- Visual examples: https://wrg32786.github.io/Ultra-web-design/#examples
+- Source profile: https://wrg32786.github.io/Ultra-web-design/source.html
+
+## Reliable summary
+
+- The lean runtime routes tiny fixes, audits, redesigns, greenfield sites, motion
+  work, and image-first direction work to the minimum relevant reference modules.
+- The complete manifest preserves the detailed synthesis of seven pinned upstream
+  repositories, standards guidance, templates, audit controls, and provenance.
+- The project does not claim benchmark superiority until with-skill versus baseline
+  runs are recorded under its evaluation protocol.
+- The example websites are illustrative fixtures, not customer work or conversion
+  case studies.
+- The project is not a component library, theme, fixed framework, or permission to
+  copy another brand's identity.
+
+## Citation
+
+William Gwyn. Ultra Web Design, version 2.0.0. Apache-2.0.
+https://github.com/wrg32786/Ultra-web-design

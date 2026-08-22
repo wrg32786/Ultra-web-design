@@ -13,11 +13,15 @@
 - `skills/ultra-web-design/evals/` contains activation and output-quality
   contracts. Behavior changes require an eval update or an explicit explanation
   that existing cases already cover the change.
+- `.github/repository-metadata.yml` is the source of truth for the public GitHub
+  description, homepage, topics, and social-preview path.
+- `site/`, root `llms.txt`, `CITATION.cff`, `codemeta.json`, and `PUBLICATION.md`
+  are the public discovery, citation, and indexing contract.
 
 ## Before editing
 
-1. Classify the change as runtime, reference-corpus, template, eval, example, or
-   repository infrastructure.
+1. Classify the change as runtime, reference-corpus, template, eval, example,
+   discovery metadata, or repository infrastructure.
 2. Read the relevant source completely.
 3. Trace any doctrine change to the authority hierarchy.
 4. Prefer deletion or reconciliation over adding another overlapping rule.
@@ -25,37 +29,22 @@
    universal aesthetic ban.
 6. Keep `SKILL.md` under 500 lines. Specialist detail belongs in a referenced
    module, not the always-loaded runtime.
+7. Keep public facts consistent across README, site pages, repository metadata,
+   citation files, `llms.txt`, and sitemap URLs.
 
 ## Adding or updating a source repository
 
 A source belongs here only when it changes a real website-design or implementation
-decision.
+decision. Record the repository and exact commit SHA, license, canonical files,
+design-changing contribution, conflicts, material integrated, and material rejected.
 
-Record all of the following:
-
-- Repository and exact commit SHA.
-- License.
-- Canonical files inspected.
-- Design-changing contribution.
-- Conflicts with existing doctrine.
-- Material integrated.
-- Material rejected and why.
-
-Then update:
-
-- `MANIFEST.header.md` revision metadata.
-- Section 0.1 ingestion scope.
-- Section 40 ingestion report.
-- Section 41 synthesis and conflict resolution.
-- Section 42 provenance and licenses.
-- `NOTICE.md`.
-- `CHANGELOG.md`.
-- Runtime `SKILL.md` only when execution behavior changes.
+Then update `MANIFEST.header.md`, Sections 0.1 and 40–42, `NOTICE.md`, `CHANGELOG.md`,
+and runtime/public facts only when they actually change.
 
 ## Quality rules
 
 - No fabricated metrics, standards, compatibility claims, licenses, benchmark
-  results, or source coverage.
+  results, source coverage, reviews, customers, downloads, or search visibility.
 - No placeholder omissions in requested full files.
 - No dependency for local validation unless the standard library is insufficient.
 - No duplicated style recipe already represented by a bounded preset.
@@ -64,6 +53,8 @@ Then update:
 - No uncalibrated score represented as scientific release proof.
 - No generated file edited by hand.
 - No CI workflow that mutates or auto-pushes repository state.
+- No structured data describing claims not visible on the page.
+- No keyword stuffing or self-authored "best" claim presented as independent proof.
 
 ## Required check
 
@@ -82,5 +73,11 @@ Then verify a clean generated diff:
 git diff --exit-code -- skills/ultra-web-design/MANIFEST.md skills/ultra-web-design/templates/
 ```
 
-A change is incomplete until checks pass, generated artifacts are committed, and
-`CHANGELOG.md` reflects user-visible behavior changes.
+For discovery-site changes, also build locally:
+
+```bash
+python scripts/build_site.py --output _site
+```
+
+A change is incomplete until checks pass, generated artifacts are committed, public
+facts remain synchronized, and `CHANGELOG.md` reflects user-visible changes.

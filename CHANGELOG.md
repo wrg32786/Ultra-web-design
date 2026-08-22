@@ -2,6 +2,23 @@
 
 All notable changes to Ultra Web Design are recorded here.
 
+## 2.0.1 — 2026-08-22
+
+- Rewrote the README opening and navigation around the public AI web design use case
+  while preserving the evidence-first beta status.
+- Added canonical GitHub description, homepage, topic, and social-preview metadata.
+- Added a crawlable semantic GitHub Pages site with canonical URLs, visible source
+  facts, Open Graph and social metadata, JSON-LD, a sitemap, and explicit crawler
+  permissions for major search and AI-search bots.
+- Added `CITATION.cff`, CodeMeta, root `llms.txt`, a verified source profile, and a
+  public-release/indexing checklist.
+- Added a deterministic Pages builder that publishes the existing visual fixtures
+  with page-specific canonical, social, and structured metadata.
+- Added a read-only Pages deployment workflow that remains inactive while the
+  repository is private.
+- Extended validation to cover public discovery, citation, crawler, structured-data,
+  sitemap, social-preview, and Pages packaging.
+
 ## 2.0.0 — 2026-08-22
 
 - Replaced the 200 KB always-loaded skill with a 274-line runtime router using
