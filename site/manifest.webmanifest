@@ -1,0 +1,10 @@
+{
+  "name": "Ultra Web Design",
+  "short_name": "Ultra Web Design",
+  "description": "Open-source AI web design Agent Skill for distinctive business websites.",
+  "start_url": "./",
+  "display": "standalone",
+  "background_color": "#f3efe6",
+  "theme_color": "#10252a",
+  "icons": []
+}
