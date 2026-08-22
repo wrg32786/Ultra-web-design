@@ -1,29 +1,51 @@
 # Ultra Web Design
 
-A production-grade Agent Skill for researching, positioning, designing, building, auditing, and shipping distinctive business websites.
+A spec-valid Agent Skill for researching, positioning, designing, building,
+auditing, and shipping distinctive business websites.
 
-Ultra Web Design turns product truth, audience context, brand evidence, visual references, implementation constraints, accessibility, performance, and business goals into one coherent website system. It is intentionally broader than a style guide and stricter than a prompt collection.
+> **Runtime version:** 2.0.0  
+> **Status:** Beta — architecture and structural validation complete; behavioral
+> benchmarks are required before promotion to production  
+> **Active skill:** [`skills/ultra-web-design/SKILL.md`](skills/ultra-web-design/SKILL.md)  
+> **Complete corpus:** [`skills/ultra-web-design/MANIFEST.md`](skills/ultra-web-design/MANIFEST.md)
 
-> **Version:** 1.1.0  
-> **Status:** Production  
-> **Canonical skill:** [`skills/ultra-web-design/SKILL.md`](skills/ultra-web-design/SKILL.md)
+Ultra Web Design turns product truth, audience context, brand evidence, visual
+references, implementation constraints, accessibility, performance, and business
+goals into one coherent website system. It is broader than a style guide and more
+operational than a prompt collection.
 
-## What it is
+## The v2 architecture
 
-Ultra Web Design is a modular operating system for website work. Its governing loop is:
+Version 2 separates the two jobs the original repository tried to make one file do:
 
-> **Read → Shape → Inspire → Synthesize → Produce → Build → Taste → Resolve → See → Polish**
+1. **`SKILL.md` is the lean runtime router.** It contains the authority hierarchy,
+   task-size classifier, always-active safeguards, module-loading rules, operating
+   loop, and release gates. It remains below the Agent Skills progressive-
+   disclosure target so the agent retains context for the actual brief and codebase.
+2. **`MANIFEST.md` is the complete reference corpus.** It preserves the full
+   source synthesis, detailed doctrine, templates, audit system, standards, and
+   provenance without loading all 200 KB on every activation.
 
-It covers:
+The runtime file is authoritative during execution. The manifest is the detailed
+reference loaded only when the task requires it.
 
-- Business strategy, offer clarity, message hierarchy, proof, objections, and conversion architecture
-- Brand authority, visual-world synthesis, composition, typography, color, material, imagery, and iconography
-- Landing pages, company sites, SaaS, ecommerce, services, media, communities, portfolios, courses, events, nonprofits, and public-service websites
-- Responsive recomposition, interaction states, forms, motion, GSAP, accessibility, performance, SEO, security, privacy, analytics, CMS operations, localization, and RTL
-- Existing-site audits and redesigns that preserve routes, forms, analytics, proof, legal language, and working business infrastructure
-- Anti-generic release tests that reject interchangeable AI layouts without replacing one rigid house style with another
+## What it covers
 
-It is **not** a component library, a theme, a fixed stack, or a demand that every site use the same visual tricks.
+- Business strategy, offer clarity, message hierarchy, proof, objections, and
+  conversion architecture.
+- Brand authority, visual-world synthesis, composition, typography, color,
+  material, imagery, iconography, and data display.
+- Landing pages, company sites, SaaS, ecommerce, services, media, communities,
+  portfolios, courses, events, nonprofits, and public-service websites.
+- Responsive recomposition, interaction states, forms, motion, GSAP,
+  accessibility, performance, SEO, security, privacy, analytics, CMS operations,
+  localization, and RTL.
+- Existing-site audits and redesigns that preserve routes, forms, analytics,
+  proof, legal language, and working business infrastructure.
+- Anti-generic release review without imposing one rigid house style.
+
+It is **not** a component library, a theme, a fixed stack, or a requirement that
+every site use the same visual tricks.
 
 ## Install
 
@@ -33,38 +55,51 @@ It is **not** a component library, a theme, a fixed stack, or a demand that ever
 npx skills add https://github.com/wrg32786/Ultra-web-design --skill ultra-web-design
 ```
 
-### Manual use
+### Manual installation
 
-Copy this directory into the skill location supported by your agent:
+Copy the complete skill directory into the skill location supported by the agent:
 
 ```text
 skills/ultra-web-design/
 ```
 
-The portable unit is the entire folder, including `SKILL.md` and its templates.
+The portable unit includes the runtime `SKILL.md`, modules, templates, complete
+manifest, and evaluation definitions.
 
-### Direct prompt use
-
-Point the agent to the canonical file and give it the project brief:
+### Direct use
 
 ```text
-Use skills/ultra-web-design/SKILL.md as the governing website-design and
-implementation skill. Read the project before choosing a direction. Apply the
-always-active core, load only the specialist modules the task needs, and verify
-the result against the definition of done before shipping.
+Use skills/ultra-web-design/SKILL.md for this website task. Classify the task
+before loading references, read the real repository and product truth, use only
+the modules the task requires, and verify rendered output before shipping.
 ```
 
-## How to use the skill
+## Operating principle
 
-1. **Establish product truth.** Complete `PRODUCT.md` or label unknown claims rather than inventing them.
-2. **Declare the design read.** Resolve the page kind, audience, decision context, visual language, and likely design-system family.
-3. **Set expression dials.** Choose project-specific values for design variance, motion intensity, and visual density.
-4. **Research deliberately.** Audit the category rut, use outside-category references, and record what discipline each reference contributes.
-5. **Choose one visual world.** Define a signature system and a restraint system. Do not combine unrelated attractive ideas.
-6. **Write the contract.** Produce `DESIGN.md`, route briefs, content, motion, and measurement plans before broad implementation.
-7. **Build within the real stack.** Reuse existing patterns, native platform features, and installed dependencies before adding code or packages.
-8. **Inspect rendered output.** Test mobile, keyboard, reduced motion, zoom, slow networks, content extremes, and actual browser behavior.
-9. **Run the release gates.** A site must be truthful, usable, accessible, fast, maintainable, measurable, and recognizably its own.
+The governing loop for substantial website work is:
+
+> **Read → Shape → Inspire → Synthesize → Produce → Build → Taste → Resolve → See → Polish**
+
+Tiny changes take a shorter path. A one-line state defect should not trigger a
+full identity exercise. A full redesign should not skip product truth,
+preservation inventory, or rendered QA.
+
+## Core safeguards
+
+- The brief and verified product truth outrank model taste.
+- Safety, security, data integrity, law, and accessibility are not aesthetic
+  preferences.
+- Existing working routes, forms, analytics, SEO, proof, legal copy, and brand
+  assets are preserved unless an approved decision changes them.
+- No testimonials, metrics, customers, prices, ratings, awards, capabilities, or
+  affiliations are invented to complete a composition.
+- Native platform behavior, standard libraries, existing project patterns, and
+  installed dependencies are preferred before new abstractions or packages.
+- Distinctiveness comes from product-specific truth, one coherent visual world,
+  signature and restraint systems, and category-rut refusal—not novelty for its
+  own sake.
+- Numeric jury scores are advisory review structure until behavioral calibration
+  exists. Hard defects and evidence determine release.
 
 ## Repository layout
 
@@ -76,11 +111,20 @@ the result against the definition of done before shipping.
 ├── CONTRIBUTING.md
 ├── LICENSE
 ├── NOTICE.md
+├── examples/
+│   ├── precision-saas/
+│   ├── local-service/
+│   └── editorial/
 ├── skills/
 │   ├── llms.txt
 │   └── ultra-web-design/
-│       ├── SKILL.md
-│       ├── SKILL.header.md
+│       ├── SKILL.md               # lean runtime authority
+│       ├── MANIFEST.md            # generated complete corpus
+│       ├── MANIFEST.header.md
+│       ├── EVALUATION.md
+│       ├── evals/
+│       │   ├── evals.json
+│       │   └── trigger-queries.json
 │       ├── modules/
 │       │   ├── 00-core.md
 │       │   └── 01…09 ordered modules
@@ -98,82 +142,133 @@ the result against the definition of done before shipping.
 │           ├── manifest.json
 │           └── tokens.css
 └── scripts/
-    ├── build_skill.py
+    ├── build_manifest.py
+    ├── sync_templates.py
     └── validate.py
 ```
 
-`modules/` is the editable source of truth. `SKILL.md` is the generated, installable single-file build. The files in `templates/` are extracted working copies of Section 38, included so a project can start without manually copying fenced examples.
+## Source-of-truth rules
 
-## Source synthesis
-
-The skill is an original synthesis and reconciliation of seven repositories, pinned so future updates can be reviewed rather than silently drifting:
-
-| Source | Primary contribution |
-|---|---|
-| `pbakaus/impeccable` | Product/design authority, visual-world creation, craft floor, critique, hardening, and responsive adaptation |
-| `nextlevelbuilder/ui-ux-pro-max-skill` | Searchable design intelligence, product/style/type/color/UX catalogs, stack guidance, and recommendation provenance |
-| `emilkowalski/skills` | Motion purpose, timing, easing, interaction vocabulary, prototyping, and animation critique |
-| `greensock/gsap-skills` | Official GSAP implementation, timelines, ScrollTrigger, lifecycle cleanup, framework integration, and performance |
-| `VoltAgent/awesome-design-md` | Comparative grammar distilled from many distinct design systems |
-| `nexu-io/open-design` | Modular skill architecture, portable design-system packages, artifact workflows, handoff, provenance, and bounded critique |
-| `Leonxlnx/taste-skill` | Brief inference, expression dials, anti-habit controls, image-first art direction, redesign preservation, and completeness checks |
-
-Exact commits, license notes, retained knowledge, rejected overfit rules, and conflict resolution live in Sections 40–42 of the canonical skill.
-
-## Design philosophy
-
-The skill does not ban a visual choice merely because an LLM often uses it. Inter, centered heroes, cards, gradients, serif type, dark mode, glass, motion, and bento layouts can all be correct.
-
-A choice fails when it is:
-
-- Unsupported by the product, audience, content, or brand
-- Repeated mechanically across the page
-- Inaccessible, misleading, slow, or brittle
-- Copied too closely from a reference
-- Interchangeable with an unrelated business
-
-Distinctiveness is enforced through product truth, category-rut refusal, one-world synthesis, controlled variance, signature and restraint systems, a uniqueness ledger, and release tests—not arbitrary novelty.
+- `SKILL.md` is the runtime execution authority and is edited directly.
+- `modules/` is the editable source for the complete reference corpus.
+- `MANIFEST.md` is generated by `scripts/build_manifest.py`; do not hand-edit it.
+- `modules/08-templates.md` is the template source of truth.
+- `templates/` is generated by `scripts/sync_templates.py`; do not allow it to
+  drift from module 08.
+- `NOTICE.md` and the manifest provenance sections retain exact upstream snapshots
+  and license notes.
 
 ## Templates
 
-Start with the smallest set the project actually needs:
+Use the smallest set the project needs:
 
-- `PRODUCT.md` — business and evidence source of truth
-- `SURFACE-BRIEF.md` — route-level job, content, states, context, and analytics
-- `DESIGN.md` — executable visual and interaction contract
-- `CONTENT-MATRIX.md` — production content and proof ledger
-- `MOTION-PLAN.md` — motion purpose, ownership, reduced motion, and validation
-- `QA-REPORT.md` — design jury, technical audit, findings, and release status
-- `REFERENCE-COMP-BIBLE.md` — image-first direction and extraction contract
+- `PRODUCT.md` — business and evidence source of truth.
+- `SURFACE-BRIEF.md` — route-level job, content, states, context, and analytics.
+- `DESIGN.md` — executable visual and interaction contract.
+- `CONTENT-MATRIX.md` — production content and proof ledger.
+- `MOTION-PLAN.md` — motion purpose, ownership, reduced motion, and validation.
+- `QA-REPORT.md` — design critique, technical audit, findings, and release status.
+- `REFERENCE-COMP-BIBLE.md` — image-first direction and extraction contract.
 
-Delete unused fields rather than preserving empty process theater.
+Delete unused fields instead of preserving empty process theater.
 
 ## Validation
 
-Build the single-file skill and run the stdlib-only validator:
+Run the repository checks:
 
 ```bash
-python scripts/build_skill.py
+python scripts/build_manifest.py
+python scripts/sync_templates.py --check
 python scripts/validate.py
+skills-ref validate skills/ultra-web-design
 ```
 
-It verifies that the generated skill matches the ordered modules, then checks frontmatter, version, complete numbered sections, source snapshots, template inventory, and minimum size needed to catch accidental truncation.
+The checks verify:
 
-GitHub Actions runs the same check on pushes and pull requests.
+- Official Agent Skills frontmatter constraints.
+- Runtime progressive-disclosure size and module routing.
+- Exact manifest generation from the ordered modules.
+- Complete numbered corpus and pinned source provenance.
+- Exact template synchronization.
+- Output and trigger eval definitions.
+- Three responsive visual fixtures with rendered desktop/mobile evidence.
+- Removal of deprecated monolithic-skill build paths.
 
-## Updating the skill
+GitHub Actions performs the same checks and fails when generated files differ from
+the committed tree. CI does not repair or push repository state.
 
-A source update is accepted only when it changes a website-design decision. Record:
+## Evaluation
 
-1. The exact upstream commit
-2. The applicable license
-3. The concrete contribution
-4. Conflicts with current doctrine
-5. What was integrated, reconciled, or rejected
-6. The updated version and changelog entry
+Structural validity does not prove that a skill improves output. The repository
+therefore includes:
 
-Run `python scripts/build_skill.py` after module changes. Do not paste an upstream skill wholesale. Preserve the authority hierarchy and resolve contradictions in one place.
+- Six realistic output-quality cases covering a tiny fix, route extension,
+  preserve-mode redesign, greenfield SaaS, editorial work, and audit-only work.
+- Twenty trigger queries split between material website tasks and near-miss
+  negatives.
+- A documented with-skill versus baseline protocol, assertion grading, timing and
+  token recording, blind visual comparison, and production-promotion criteria.
+
+See [`EVALUATION.md`](skills/ultra-web-design/EVALUATION.md).
+
+No benchmark number is claimed until the corresponding run artifacts exist.
+
+## Visual fixtures
+
+The repository includes three dependency-free responsive HTML fixtures plus a
+reviewed desktop/mobile evidence contact sheet:
+
+- **Precision SaaS** — product mechanism as proof, annotated operational detail,
+  and no invented social proof.
+- **Local service** — a field-guide world shaped by geography, site assessment,
+  and service decisions rather than SaaS conventions.
+- **Editorial** — reading-first hierarchy, issue archive, sponsor disclosure, and
+  membership after value.
+
+They demonstrate visual breadth, not conversion performance or customer work. See
+[`examples/README.md`](examples/README.md).
+
+## Source synthesis
+
+The complete manifest reconciles seven repositories at exact snapshots:
+
+| Source | Primary contribution |
+|---|---|
+| `pbakaus/impeccable` | Product/design authority, visual-world creation, craft floor, critique, hardening, responsive adaptation |
+| `nextlevelbuilder/ui-ux-pro-max-skill` | Searchable design intelligence, catalogs, stack guidance, recommendation provenance |
+| `emilkowalski/skills` | Motion purpose, timing, easing, interaction vocabulary, prototyping, animation critique |
+| `greensock/gsap-skills` | Official GSAP implementation, timelines, ScrollTrigger, lifecycle cleanup, framework integration |
+| `VoltAgent/awesome-design-md` | Comparative grammar distilled from distinct design systems |
+| `nexu-io/open-design` | Modular skill architecture, portable design-system packages, artifacts, handoff, provenance, bounded critique |
+| `Leonxlnx/taste-skill` | Brief inference, expression dials, anti-habit controls, image-first art direction, redesign preservation, completeness |
+
+Exact commits, license notes, retained knowledge, rejected overfit rules, and
+conflict resolution live in `NOTICE.md` and Sections 40–42 of the manifest.
+
+## Updating the corpus
+
+A source update is accepted only when it changes a website-design or implementation
+decision. Record:
+
+1. Exact upstream commit.
+2. Applicable license.
+3. Canonical files inspected.
+4. Concrete contribution.
+5. Conflict with current doctrine.
+6. Material integrated, reconciled, or rejected.
+7. Updated runtime behavior, version, and changelog when applicable.
+
+Do not paste an upstream skill wholesale. Preserve the authority hierarchy and
+resolve contradictions once.
+
+## Status policy
+
+The runtime remains `beta` until the criteria in `EVALUATION.md` pass across the
+supported clients and at least three real projects. This is deliberate: the
+repository applies the same evidence standard to its own maturity claims that it
+requires for website claims.
 
 ## License
 
-Apache License 2.0. See [`NOTICE.md`](NOTICE.md) for upstream provenance and third-party license notes.
+Apache License 2.0. See [`NOTICE.md`](NOTICE.md) for upstream provenance and
+third-party license notes.

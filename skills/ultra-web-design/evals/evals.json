@@ -1,0 +1,79 @@
+{
+  "skill_name": "ultra-web-design",
+  "version": "2.0.0",
+  "baseline": "Run once with this skill and once without it or with the previous tagged version.",
+  "evals": [
+    {
+      "id": "tiny-button-state",
+      "task_type": "tiny-fix",
+      "prompt": "The existing checkout button becomes unreadable while the request is pending. Fix only that state, keep the current design system, and do not add dependencies.",
+      "expected_output": "A minimal root-cause code change in the existing button or shared state primitive, plus one focused regression check. No brand workshop or speculative design documents.",
+      "assertions": [
+        "The response classifies the work as a tiny or local fix and avoids the full design workflow.",
+        "The implementation reuses the existing button/state system and adds no dependency.",
+        "The pending state remains accessible and prevents duplicate activation.",
+        "At least one focused runnable check covers the non-trivial state transition."
+      ]
+    },
+    {
+      "id": "established-brand-route",
+      "task_type": "route-extension",
+      "prompt": "Add a customer stories route to an established B2B site. Use the current components, tokens, analytics naming, and CMS model. The page needs one featured case and a searchable archive.",
+      "expected_output": "A route-level brief and implementation that inherit the established system, add only necessary CMS/search behavior, cover states, and preserve analytics and accessibility conventions.",
+      "assertions": [
+        "The output inventories and reuses existing brand, component, token, CMS, and analytics conventions.",
+        "The page includes loading, empty, error, populated, and long-content behavior for the archive.",
+        "Search state is shareable or recoverable through the URL when the existing stack supports it.",
+        "The output does not initiate a new visual identity or introduce an overlapping component library."
+      ]
+    },
+    {
+      "id": "preserve-mode-redesign",
+      "task_type": "preserve-redesign",
+      "prompt": "Modernize this service-business homepage without changing its URLs, navigation labels, contact form fields, call-tracking number, conversion events, legal copy, or approved logo. Mobile conversion matters most.",
+      "expected_output": "A preservation inventory, low-risk modernization plan, and implementation that improves hierarchy and mobile usability while keeping business infrastructure intact.",
+      "assertions": [
+        "The output explicitly preserves every named route, navigation, form, analytics, legal, phone, and logo contract.",
+        "Modernization starts with typography, hierarchy, spacing, states, and responsive recomposition before structural replacement.",
+        "The mobile primary action remains visible and usable without hiding essential information.",
+        "The final checks include form delivery, call tracking, analytics deduplication, keyboard access, and responsive inspection."
+      ]
+    },
+    {
+      "id": "greenfield-saas",
+      "task_type": "greenfield",
+      "prompt": "Design and build a greenfield marketing site for a reconciliation product used by operations teams. The product compares records, surfaces mismatches, and creates an auditable review trail. No customer logos or performance metrics are available yet.",
+      "expected_output": "A truthful product model, three materially different directions, one selected visual world, an evidence-led implementation, and release QA without fabricated social proof.",
+      "assertions": [
+        "The output uses product demonstration, process transparency, or labeled examples instead of invented logos, testimonials, or metrics.",
+        "The direction candidates differ in governing composition and expressive logic, not merely color.",
+        "The chosen direction defines a signature system, restraint system, mobile recomposition, and implementation risks.",
+        "The implemented page contains real semantic content, states, responsive behavior, and one product-specific detail that passes the soul test."
+      ]
+    },
+    {
+      "id": "editorial-membership",
+      "task_type": "editorial",
+      "prompt": "Create an editorial membership site for a weekly field journal. Reading comes first; membership is secondary. It needs an issue archive, author pages, sponsor disclosures, accessible media transcripts, and a mobile reading experience.",
+      "expected_output": "An editorial-spine system with strong reading hierarchy, honest sponsor treatment, useful archive behavior, and restrained membership conversion.",
+      "assertions": [
+        "The output prioritizes reading measure, hierarchy, recency, authorship, sourcing, taxonomy, and return navigation.",
+        "Sponsor and affiliate material is visually and semantically distinguished from editorial content.",
+        "Membership prompts appear after value is established and do not interrupt the critical reading path.",
+        "Archive, transcripts, keyboard navigation, mobile typography, and content extremes receive explicit coverage."
+      ]
+    },
+    {
+      "id": "audit-without-editing",
+      "task_type": "audit-only",
+      "prompt": "Audit this deployed marketing site for design quality, accessibility, responsive behavior, performance, SEO, analytics, and generic AI patterns. Do not change any files.",
+      "expected_output": "A verified audit with positive findings, prioritized defects, root causes, exact corrections, evidence, and explicit uncertainty where live access is insufficient. No silent edits.",
+      "assertions": [
+        "The output does not edit files or represent unobserved behavior as verified.",
+        "Findings use severity, location, evidence, impact, root cause, correction, and a smallest regression check.",
+        "The audit separates design critique from technical audit and records what should be preserved.",
+        "Generic-pattern findings explain the underlying repetition, meaninglessness, mismatch, or technical harm rather than merely saying it looks AI-generated."
+      ]
+    }
+  ]
+}
