@@ -1,0 +1,32 @@
+name: Build and validate skill
+
+on:
+  push:
+  pull_request:
+
+permissions:
+  contents: write
+
+jobs:
+  build-and-validate:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+        with:
+          fetch-depth: 0
+      - uses: actions/setup-python@v5
+        with:
+          python-version: "3.12"
+      - run: python scripts/build_skill.py
+      - run: python scripts/validate.py
+      - name: Commit generated skill
+        if: github.event_name == 'push'
+        run: |
+          if git diff --quiet -- skills/ultra-web-design/SKILL.md; then
+            exit 0
+          fi
+          git config user.name "github-actions[bot]"
+          git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
+          git add skills/ultra-web-design/SKILL.md
+          git commit -m "Build canonical skill [skip ci]"
+          git push
