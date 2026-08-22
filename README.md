@@ -1,7 +1,20 @@
 # Ultra Web Design
 
-A spec-valid Agent Skill for researching, positioning, designing, building,
-auditing, and shipping distinctive business websites.
+**The open-source AI web design Agent Skill for distinctive, production-ready business websites.**
+
+Ultra Web Design is an open-source web design repository on GitHub and a spec-valid
+Agent Skill for researching, positioning, designing, building, auditing, and shipping
+business websites. It connects product truth, content architecture, visual direction,
+responsive implementation, accessibility, motion, performance, SEO, security,
+analytics, and release QA without forcing every project into the same AI-generated
+layout.
+
+[Project website](https://wrg32786.github.io/Ultra-web-design/) ·
+[Source profile](https://wrg32786.github.io/Ultra-web-design/source.html) ·
+[Install](#install) · [Examples](#visual-examples) ·
+[Complete manifest](skills/ultra-web-design/MANIFEST.md)
+
+![Ultra Web Design: SaaS, local service, and editorial examples](examples/evidence.webp)
 
 > **Runtime version:** 2.0.0  
 > **Status:** Beta — architecture and structural validation complete; behavioral
@@ -9,43 +22,25 @@ auditing, and shipping distinctive business websites.
 > **Active skill:** [`skills/ultra-web-design/SKILL.md`](skills/ultra-web-design/SKILL.md)  
 > **Complete corpus:** [`skills/ultra-web-design/MANIFEST.md`](skills/ultra-web-design/MANIFEST.md)
 
-Ultra Web Design turns product truth, audience context, brand evidence, visual
-references, implementation constraints, accessibility, performance, and business
-goals into one coherent website system. It is broader than a style guide and more
-operational than a prompt collection.
+## Why this web design repository exists
 
-## The v2 architecture
+AI can produce a polished landing-page screenshot quickly. The harder job is building
+a website that is true to the product, useful to the visitor, distinct from category
+clichés, accessible, responsive, fast, maintainable, measurable, and safe to ship.
 
-Version 2 separates the two jobs the original repository tried to make one file do:
+Ultra Web Design starts with the actual business and implementation system:
 
-1. **`SKILL.md` is the lean runtime router.** It contains the authority hierarchy,
-   task-size classifier, always-active safeguards, module-loading rules, operating
-   loop, and release gates. It remains below the Agent Skills progressive-
-   disclosure target so the agent retains context for the actual brief and codebase.
-2. **`MANIFEST.md` is the complete reference corpus.** It preserves the full
-   source synthesis, detailed doctrine, templates, audit system, standards, and
-   provenance without loading all 200 KB on every activation.
+- audience, offer, product mechanism, proof, objections, CTA, and success measure;
+- existing routes, forms, analytics, SEO, legal language, brand assets, and working
+  infrastructure that a redesign must preserve;
+- one coherent visual world with a signature system and a restraint system;
+- semantic implementation, interaction states, responsive recomposition, keyboard
+  behavior, reduced motion, performance budgets, and failure recovery;
+- source provenance, truth labels, evaluation contracts, and explicit limits on what
+  has not yet been proven.
 
-The runtime file is authoritative during execution. The manifest is the detailed
-reference loaded only when the task requires it.
-
-## What it covers
-
-- Business strategy, offer clarity, message hierarchy, proof, objections, and
-  conversion architecture.
-- Brand authority, visual-world synthesis, composition, typography, color,
-  material, imagery, iconography, and data display.
-- Landing pages, company sites, SaaS, ecommerce, services, media, communities,
-  portfolios, courses, events, nonprofits, and public-service websites.
-- Responsive recomposition, interaction states, forms, motion, GSAP,
-  accessibility, performance, SEO, security, privacy, analytics, CMS operations,
-  localization, and RTL.
-- Existing-site audits and redesigns that preserve routes, forms, analytics,
-  proof, legal language, and working business infrastructure.
-- Anti-generic release review without imposing one rigid house style.
-
-It is **not** a component library, a theme, a fixed stack, or a requirement that
-every site use the same visual tricks.
+It is **not** a component library, website theme, fixed frontend stack, or permission
+to imitate another brand.
 
 ## Install
 
@@ -74,15 +69,45 @@ before loading references, read the real repository and product truth, use only
 the modules the task requires, and verify rendered output before shipping.
 ```
 
+## Architecture
+
+Version 2 separates two jobs that should not compete for the same context window:
+
+1. **`SKILL.md` is the lean runtime router.** It contains the authority hierarchy,
+   task-size classifier, hard safeguards, reference-loading rules, operating loop,
+   and release gates. Tiny fixes take a tiny path.
+2. **`MANIFEST.md` is the complete reference corpus.** It preserves the detailed
+   source synthesis, business and content systems, visual craft, motion,
+   accessibility, performance, SEO, security, operations, templates, audits, and
+   provenance. Agents load only the relevant modules.
+
+The runtime file is authoritative during execution. The manifest is the detailed
+on-demand reference.
+
+## What it covers
+
+- Business strategy, offer clarity, message hierarchy, proof, objections, and
+  conversion architecture.
+- Brand authority, visual-world synthesis, composition, typography, color,
+  material, imagery, iconography, diagrams, and data display.
+- Landing pages, company sites, SaaS, ecommerce, services, media, communities,
+  portfolios, courses, events, nonprofits, and public-service websites.
+- Responsive recomposition, interaction states, forms, motion, GSAP,
+  accessibility, performance, SEO, security, privacy, analytics, CMS operations,
+  localization, and RTL.
+- Existing-site audits and redesigns that preserve routes, forms, analytics,
+  proof, legal language, brand identity, and working business infrastructure.
+- Anti-generic release review without imposing one rigid house style.
+
 ## Operating principle
 
 The governing loop for substantial website work is:
 
 > **Read → Shape → Inspire → Synthesize → Produce → Build → Taste → Resolve → See → Polish**
 
-Tiny changes take a shorter path. A one-line state defect should not trigger a
-full identity exercise. A full redesign should not skip product truth,
-preservation inventory, or rendered QA.
+Tiny changes take a shorter path. A one-line state defect should not trigger a full
+identity exercise. A full redesign should not skip product truth, preservation
+inventory, or rendered QA.
 
 ## Core safeguards
 
@@ -101,16 +126,57 @@ preservation inventory, or rendered QA.
 - Numeric jury scores are advisory review structure until behavioral calibration
   exists. Hard defects and evidence determine release.
 
+## Visual examples
+
+The repository includes three dependency-free responsive HTML fixtures:
+
+- **[Precision SaaS](examples/precision-saas/)** — product mechanism as proof,
+  annotated operational detail, and no invented social proof.
+- **[Local service](examples/local-service/)** — a field-guide world shaped by
+  geography, site assessment, and service decisions rather than SaaS conventions.
+- **[Editorial](examples/editorial/)** — reading-first hierarchy, issue archive,
+  sponsor disclosure, and membership after value.
+
+After the repository is public, crawlable versions deploy to the
+[project website](https://wrg32786.github.io/Ultra-web-design/#examples).
+They demonstrate visual breadth, not conversion performance or customer work.
+
+## Search, citation, and machine-readable metadata
+
+The repository is prepared to function as a clear public source rather than only a
+code dump:
+
+- [`CITATION.cff`](CITATION.cff) enables GitHub's citation interface and records the
+  preferred author, title, version, license, and canonical URL.
+- [`codemeta.json`](codemeta.json) describes the software in a machine-readable
+  CodeMeta/Schema.org record.
+- [`llms.txt`](llms.txt) gives AI systems a concise map of canonical documents,
+  verified facts, limitations, and citation guidance.
+- [`site/`](site/) contains a semantic static discovery site with canonical URLs,
+  Open Graph and social metadata, JSON-LD, crawler permissions, and a sitemap.
+- [`PUBLICATION.md`](PUBLICATION.md) contains the exact public-release, Pages,
+  indexing, AI crawler, external-authority, and monitoring checklist.
+- [`.github/repository-metadata.yml`](.github/repository-metadata.yml) is the source
+  of truth for the GitHub About description, homepage, topics, and social preview.
+
+These files improve clarity and attribution. They do not replace public visibility,
+ordinary search indexing, useful original content, real usage, or independent links.
+
 ## Repository layout
 
 ```text
 .
 ├── README.md
+├── PUBLICATION.md
+├── CITATION.cff
+├── codemeta.json
+├── llms.txt
 ├── AGENTS.md
 ├── CHANGELOG.md
 ├── CONTRIBUTING.md
 ├── LICENSE
 ├── NOTICE.md
+├── site/                         # GitHub Pages discovery source
 ├── examples/
 │   ├── precision-saas/
 │   ├── local-service/
@@ -118,31 +184,17 @@ preservation inventory, or rendered QA.
 ├── skills/
 │   ├── llms.txt
 │   └── ultra-web-design/
-│       ├── SKILL.md               # lean runtime authority
-│       ├── MANIFEST.md            # generated complete corpus
+│       ├── SKILL.md              # lean runtime authority
+│       ├── MANIFEST.md           # generated complete corpus
 │       ├── MANIFEST.header.md
 │       ├── EVALUATION.md
 │       ├── evals/
-│       │   ├── evals.json
-│       │   └── trigger-queries.json
 │       ├── modules/
-│       │   ├── 00-core.md
-│       │   └── 01…09 ordered modules
 │       └── templates/
-│           ├── PRODUCT.md
-│           ├── DIRECTION-CARD.md
-│           ├── SURFACE-BRIEF.md
-│           ├── DESIGN.md
-│           ├── CONTENT-MATRIX.md
-│           ├── MOTION-PLAN.md
-│           ├── DECISIONS.md
-│           ├── QA-REPORT.md
-│           ├── REFERENCE-COMP-BIBLE.md
-│           ├── BLOCK-RECORD.md
-│           ├── manifest.json
-│           └── tokens.css
 └── scripts/
     ├── build_manifest.py
+    ├── build_site.py
+    ├── build_social_preview.py
     ├── sync_templates.py
     └── validate.py
 ```
@@ -155,6 +207,9 @@ preservation inventory, or rendered QA.
 - `modules/08-templates.md` is the template source of truth.
 - `templates/` is generated by `scripts/sync_templates.py`; do not allow it to
   drift from module 08.
+- `.github/repository-metadata.yml` governs public GitHub metadata.
+- `site/`, root `llms.txt`, `CITATION.cff`, and `codemeta.json` govern public search
+  and citation facts.
 - `NOTICE.md` and the manifest provenance sections retain exact upstream snapshots
   and license notes.
 
@@ -187,11 +242,13 @@ The checks verify:
 
 - Official Agent Skills frontmatter constraints.
 - Runtime progressive-disclosure size and module routing.
-- Exact manifest generation from the ordered modules.
+- Exact manifest generation from ordered modules.
 - Complete numbered corpus and pinned source provenance.
 - Exact template synchronization.
 - Output and trigger eval definitions.
-- Three responsive visual fixtures with rendered desktop/mobile evidence.
+- Three responsive visual fixtures.
+- Search, citation, crawler, structured-data, sitemap, social-preview, and Pages
+  packaging.
 - Removal of deprecated monolithic-skill build paths.
 
 GitHub Actions performs the same checks and fails when generated files differ from
@@ -210,23 +267,7 @@ therefore includes:
   token recording, blind visual comparison, and production-promotion criteria.
 
 See [`EVALUATION.md`](skills/ultra-web-design/EVALUATION.md).
-
 No benchmark number is claimed until the corresponding run artifacts exist.
-
-## Visual fixtures
-
-The repository includes three dependency-free responsive HTML fixtures plus a
-reviewed desktop/mobile evidence contact sheet:
-
-- **Precision SaaS** — product mechanism as proof, annotated operational detail,
-  and no invented social proof.
-- **Local service** — a field-guide world shaped by geography, site assessment,
-  and service decisions rather than SaaS conventions.
-- **Editorial** — reading-first hierarchy, issue archive, sponsor disclosure, and
-  membership after value.
-
-They demonstrate visual breadth, not conversion performance or customer work. See
-[`examples/README.md`](examples/README.md).
 
 ## Source synthesis
 
@@ -245,21 +286,15 @@ The complete manifest reconciles seven repositories at exact snapshots:
 Exact commits, license notes, retained knowledge, rejected overfit rules, and
 conflict resolution live in `NOTICE.md` and Sections 40–42 of the manifest.
 
-## Updating the corpus
+## Updating the project
 
 A source update is accepted only when it changes a website-design or implementation
-decision. Record:
+decision. Record the exact upstream commit, applicable license, canonical files,
+concrete contribution, conflicts, retained material, and rejected material.
 
-1. Exact upstream commit.
-2. Applicable license.
-3. Canonical files inspected.
-4. Concrete contribution.
-5. Conflict with current doctrine.
-6. Material integrated, reconciled, or rejected.
-7. Updated runtime behavior, version, and changelog when applicable.
-
-Do not paste an upstream skill wholesale. Preserve the authority hierarchy and
-resolve contradictions once.
+Public metadata changes must keep README facts, the project site, `llms.txt`,
+`CITATION.cff`, `codemeta.json`, repository metadata, and sitemap URLs consistent.
+See [`AGENTS.md`](AGENTS.md) and [`PUBLICATION.md`](PUBLICATION.md).
 
 ## Status policy
 
