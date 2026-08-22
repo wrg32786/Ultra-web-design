@@ -1,0 +1,82 @@
+[
+  {
+    "query": "We need a complete new website for our B2B service, from positioning and page structure through responsive implementation.",
+    "should_trigger": true
+  },
+  {
+    "query": "Can you redesign our homepage but keep the forms, URLs, analytics events, and SEO pages working?",
+    "should_trigger": true
+  },
+  {
+    "query": "build a landing page for this new product and make it not look like the same AI SaaS template everyone uses",
+    "should_trigger": true
+  },
+  {
+    "query": "Audit this site on mobile and desktop for accessibility, speed, visual hierarchy, conversion, and generic patterns.",
+    "should_trigger": true
+  },
+  {
+    "query": "Our agency site has good content but the design is weak. Rework the visual system and implement it in the existing Next.js repo.",
+    "should_trigger": true
+  },
+  {
+    "query": "I need a product website with pricing, comparison, ecommerce checkout handoff, and accurate structured data.",
+    "should_trigger": true
+  },
+  {
+    "query": "make this newsletter archive easier to read and navigate, especially on phones, without hurting sponsor placements",
+    "should_trigger": true
+  },
+  {
+    "query": "Turn our approved brand guide into a DESIGN.md, semantic tokens, components, and a working marketing route.",
+    "should_trigger": true
+  },
+  {
+    "query": "The page feels generic and over-carded. Diagnose the design system and fix the shared roots rather than patching each section.",
+    "should_trigger": true
+  },
+  {
+    "query": "We want an image-led web concept, then a real accessible implementation that preserves the composition across breakpoints.",
+    "should_trigger": true
+  },
+  {
+    "query": "Explain what CSS Grid is and show a five-line example.",
+    "should_trigger": false
+  },
+  {
+    "query": "Write a React hook that debounces a search input.",
+    "should_trigger": false
+  },
+  {
+    "query": "Can you make a logo for my coffee company?",
+    "should_trigger": false
+  },
+  {
+    "query": "Review this SQL migration for locking risk.",
+    "should_trigger": false
+  },
+  {
+    "query": "Fix the typo in this paragraph and preserve my tone.",
+    "should_trigger": false
+  },
+  {
+    "query": "Convert this Figma component into SwiftUI.",
+    "should_trigger": false
+  },
+  {
+    "query": "Why does my API return a 401 when the token is present?",
+    "should_trigger": false
+  },
+  {
+    "query": "Generate a cinematic product photo for an ad campaign.",
+    "should_trigger": false
+  },
+  {
+    "query": "Update one unit test after I renamed this Python function.",
+    "should_trigger": false
+  },
+  {
+    "query": "Give me ten headline ideas for tomorrow's newsletter.",
+    "should_trigger": false
+  }
+]
