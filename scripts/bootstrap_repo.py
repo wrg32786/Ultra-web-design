@@ -12,14 +12,25 @@ from pathlib import Path
 ROOT = Path(__file__).resolve().parents[1]
 BOOTSTRAP = ROOT / ".bootstrap"
 ARCHIVE = BOOTSTRAP / "repo.tar.gz"
-EXPECTED_PARTS = 7
+PART_NAMES = (
+    "part-00-a.txt",
+    "part-00-b.txt",
+    "part-00-c.txt",
+    "part-01.txt",
+    "part-02.txt",
+    "part-03.txt",
+    "part-04.txt",
+    "part-05.txt",
+    "part-06.txt",
+)
 EXPECTED_SHA256 = "28275957770f4aa3f3e360d3b401d099b35e6557b14e8a3d2e745b48adf8529e"
 
 
 def main() -> None:
-    parts = sorted(BOOTSTRAP.glob("part-*.txt"))
-    if len(parts) != EXPECTED_PARTS:
-        raise SystemExit(f"Expected {EXPECTED_PARTS} payload parts, found {len(parts)}")
+    parts = [BOOTSTRAP / name for name in PART_NAMES]
+    missing = [path.name for path in parts if not path.is_file()]
+    if missing:
+        raise SystemExit(f"Missing payload parts: {', '.join(missing)}")
 
     encoded = "".join(
         "".join(path.read_text(encoding="utf-8").split()) for path in parts
