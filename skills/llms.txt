@@ -1,1 +1,1 @@
-ultra-web-design: Production website strategy, design, development, motion, accessibility, performance, SEO, QA, and anti-generic release skill. Read the brief, establish product truth, choose one coherent visual world, build within the real stack, and verify the rendered result.
+ultra-web-design: Use for material business-website design, redesign, implementation, or audit work. Classify task size first, preserve product and repository truth, load only the relevant modules, choose one coherent visual world, build in the real stack, and verify rendered output.
