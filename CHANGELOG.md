@@ -5,9 +5,9 @@ All notable changes to Ultra Web Design are recorded here.
 ## 2.0.2 — 2026-08-23
 
 - Replaced the low-legibility bitmap social preview with a clear typographic 1200×630 image.
-- Added the pinned build-time Pillow dependency required for consistent text rendering.
+- Added the build-time Pillow dependency required for consistent text rendering.
 - Updated validation and GitHub Pages workflows to install discovery build dependencies.
-- Added a one-time automated cleanup workflow for the eighteen merged or bootstrap branches.
+- Removed eighteen merged or bootstrap branches, leaving `main` as the only branch.
 - Made the public Pages deployment run automatically on this release push.
 
 ## 2.0.1 — 2026-08-22
