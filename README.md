@@ -1,5 +1,7 @@
 # Ultra Web Design
 
+> **This project is frozen.** Active development continues in [Aigent Design System](https://github.com/wrg32786/aigent-design-system) as the [`aigent-business-sites`](https://github.com/wrg32786/aigent-design-system/tree/master/skills/aigent-business-sites) skill. This repository remains the Apache-2.0 source for that material.
+
 **The open-source AI web design Agent Skill for distinctive, production-ready business websites.**
 
 Ultra Web Design is an open-source web design repository on GitHub and a spec-valid

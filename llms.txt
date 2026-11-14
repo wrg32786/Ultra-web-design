@@ -8,6 +8,9 @@ Project website: https://wrg32786.github.io/Ultra-web-design/
 License: Apache-2.0
 Current runtime: 2.0.0 beta
 Maintainer: William Gwyn (GitHub: wrg32786)
+Status: frozen. Continued work lives in Aigent Design System as the aigent-business-sites skill:
+https://github.com/wrg32786/aigent-design-system/tree/master/skills/aigent-business-sites
+This repository remains the Apache-2.0 source.
 
 ## What it is
 
