@@ -305,6 +305,10 @@ supported clients and at least three real projects. This is deliberate: the
 repository applies the same evidence standard to its own maturity claims that it
 requires for website claims.
 
+## Get guidance
+
+Want help putting this to work? The AIgent Academy on Skool offers guidance, courses and a community of builders. Membership comes with a guarantee: you have a business in 90 days or your money back. See the [terms](https://theaigent.co/terms). [Join The AIgent Academy](https://www.skool.com/the-aigent-academy/about).
+
 ## License
 
 Apache License 2.0. See [`NOTICE.md`](NOTICE.md) for upstream provenance and
