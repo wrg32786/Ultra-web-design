@@ -36,6 +36,9 @@ h1 { max-width: 10ch; margin: 0; font-size: clamp(3.5rem, 8vw, 7.6rem); line-hei
 .actions { display: flex; flex-wrap: wrap; gap: .8rem; margin-top: 2rem; }
 .button { min-height: 46px; display: inline-flex; align-items: center; justify-content: center; padding: .75rem 1rem; border: 1px solid var(--ink); background: var(--ink); color: var(--surface); text-decoration: none; font-weight: 800; }
 .button.secondary { background: transparent; color: var(--ink); }
+.hero-alt { margin: 1rem 0 0; font-size: .92rem; }
+.hero-alt a { color: inherit; }
+.actions .button { max-width: 100%; text-align: center; }
 .install { margin-top: 1rem; padding: .9rem 1rem; overflow-x: auto; border-left: 4px solid var(--signal); background: #e6dfd3; font-size: .88rem; }
 .hero-art { border: 1px solid var(--ink); box-shadow: 14px 14px 0 var(--signal); }
 .signal-strip { background: var(--ink); color: var(--surface); }

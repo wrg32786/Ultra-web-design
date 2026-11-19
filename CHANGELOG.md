@@ -2,6 +2,11 @@
 
 All notable changes to Ultra Web Design are recorded here.
 
+## Unreleased
+
+- Point the README and discovery site at aigent-design-system as the maintained version, keep the evidence visuals up front, and link the Site Vault demo as "See what it builds."
+- Tag the AIgent Academy link (`ref=gh-ultra-web-design`) and add a Get help issue contact link.
+
 ## 2.0.2 — 2026-08-23
 
 - Replaced the low-legibility bitmap social preview with a clear typographic 1200×630 image.

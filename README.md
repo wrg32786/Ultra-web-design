@@ -1,6 +1,16 @@
 # Ultra Web Design
 
-> **This project is frozen.** Active development continues in [Aigent Design System](https://github.com/wrg32786/aigent-design-system) as the [`aigent-business-sites`](https://github.com/wrg32786/aigent-design-system/tree/master/skills/aigent-business-sites) skill. This repository remains the Apache-2.0 source for that material.
+> **This project is frozen.** The maintained version is [aigent-design-system](https://github.com/wrg32786/aigent-design-system). This repository remains the Apache-2.0 source for the [`aigent-business-sites`](https://github.com/wrg32786/aigent-design-system/tree/master/skills/aigent-business-sites) skill.
+
+## The maintained version is aigent-design-system
+
+**[The maintained version is aigent-design-system](https://github.com/wrg32786/aigent-design-system)**
+
+**[See what it builds](https://tools.theaigent.co/aigent-site-vault)**
+
+Use the successor for new work. It picks a visual direction, builds the site, and checks the result in a real browser. The [Site Vault](https://tools.theaigent.co/aigent-site-vault) is the live showcase: 30 original sites you can browse and open.
+
+![Ultra Web Design: SaaS, local service, and editorial examples](examples/evidence.webp)
 
 **The open-source AI web design Agent Skill for distinctive, production-ready business websites.**
 
@@ -14,9 +24,8 @@ layout.
 [Project website](https://wrg32786.github.io/Ultra-web-design/) ·
 [Source profile](https://wrg32786.github.io/Ultra-web-design/source.html) ·
 [Install](#install) · [Examples](#visual-examples) ·
-[Complete manifest](skills/ultra-web-design/MANIFEST.md)
-
-![Ultra Web Design: SaaS, local service, and editorial examples](examples/evidence.webp)
+[Complete manifest](skills/ultra-web-design/MANIFEST.md) ·
+[aigent-design-system](https://github.com/wrg32786/aigent-design-system)
 
 > **Runtime version:** 2.0.0  
 > **Status:** Beta — architecture and structural validation complete; behavioral
@@ -307,7 +316,7 @@ requires for website claims.
 
 ## Get guidance
 
-Want help putting this to work? The AIgent Academy on Skool offers guidance, courses and a community of builders. Membership comes with a guarantee: you have a business in 90 days or your money back. See the [terms](https://theaigent.co/terms). [Join The AIgent Academy](https://www.skool.com/the-aigent-academy/about).
+Want help putting this to work? The AIgent Academy on Skool offers guidance, courses and a community of builders. Membership comes with a guarantee: you have a business in 90 days or your money back. See the [terms](https://theaigent.co/terms). The full walkthrough is in [The AIgent Academy](https://www.skool.com/the-aigent-academy/about?ref=gh-ultra-web-design).
 
 ## License
 
